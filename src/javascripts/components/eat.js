@@ -1,25 +1,36 @@
 import utils from '../helpers/utils';
 import textData from '../helpers/data/textData';
-import display from './display';
 
-const submitForm = (e) => {
-  e.preventDefault();
-  const formText = $('#form-text').val();
-  textData.setText(formText);
-  display.showDisplay();
-};
+// const unhealthyFoodBtn = (e) => {
+// if (e.target.id === 'unhealthy') {
+//  return 'unhealthy button clicked';
+//  $('#healthy').click(unhealthyFoodBtn);
+// }
+// };
 
-const displayForm = () => {
+
+// const healthyFoodBtn = (e) => {
+//  if (e.target.id === 'healthy') {
+//    const eatStatus = textData.getEatStatus();
+//    const newScore = eatStatus += 10;
+//    eatStatus.full = newScore;
+//    eat.eatDomBuilder();
+//    $('#healthy').click(healthyFoodBtn);
+
+//  }healthyFoodBtn();
+// };
+
+
+const eatDomBuilder = () => {
+  const eat = textData.getEatStatus();
   let domString = '';
-  domString += '<form>';
-  domString += '<div class="form-group">';
-  domString += '<label for= "form-text">Text</label>';
-  domString += '<input type= "text" class="form-control" id="form-text" placeholder="eat example">';
-  domString += '</div>';
-  domString += '<button id= "really-nice-form-button" type="submit" class="btn btn-primary">EatSubmit</button>';
-  domString += '</form>';
+  eat.forEach((eatStatus) => {
+    domString += '<div>';
+    domString += `<h2>Fullness Score ${eatStatus.full}</h2>`;
+    domString += '<button id="healthy">Healthy Food</button>';
+    domString += '<button id="unhealthy">Unhealthy Food</button>';
+  });
   utils.printToDom('eat', domString);
-  $('#really-nice-form-button').click(submitForm);
 };
 
-export default { displayForm };
+export default { eatDomBuilder };

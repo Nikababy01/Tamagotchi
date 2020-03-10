@@ -4,21 +4,19 @@ import './play.scss';
 
 const playDomBuilder = () => {
   const play = textData.getPlayStatus();
-  let domString = '';
-  play.forEach((playStatus) => {
-    domString += '<div>';
-    domString += '<h1>PLAY</h1>';
-    domString += `<h2>Score ${playStatus.fun}</h2>`;
-    domString += '<div class= "container">';
-    domString += '<button id="super">Super Fun</button>';
-    domString += '<button id="slightly">Slightly Fun</button>';
-    domString += '</div>';
-    domString += '</div>';
-  });
+  const domString = `<div>
+   <h1>PLAY</h1>
+   <h2>Score ${play[0].fun}</h2>
+   <div class = "container">
+   <button id="super">Super Fun</button>
+   <button id="slightly">Slightly Fun</button>
+   </div>
+   </div>`;
   utils.printToDom('play', domString);
   $('#super').click(() => {
     console.error('clicked');
   });
 };
+
 
 export default { playDomBuilder };

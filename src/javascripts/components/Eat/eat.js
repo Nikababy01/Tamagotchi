@@ -1,5 +1,6 @@
-import utils from '../helpers/utils';
-import textData from '../helpers/data/textData';
+import utils from '../../helpers/utils';
+import textData from '../../helpers/data/textData';
+import './eat.scss';
 
 // const unhealthyFoodBtn = (e) => {
 // if (e.target.id === 'unhealthy') {
@@ -10,14 +11,10 @@ import textData from '../helpers/data/textData';
 
 
 // const healthyFoodBtn = (e) => {
-//  if (e.target.id === 'healthy') {
-//    const eatStatus = textData.getEatStatus();
-//    const newScore = eatStatus += 10;
-//    eatStatus.full = newScore;
-//    eat.eatDomBuilder();
-//    $('#healthy').click(healthyFoodBtn);
-
-//  }healthyFoodBtn();
+// if (e.target.id === 'healthy') {
+// console.error('clicked');
+//   }
+//   $('#healthy').click(healthyFoodBtn);
 // };
 
 
@@ -26,11 +23,19 @@ const eatDomBuilder = () => {
   let domString = '';
   eat.forEach((eatStatus) => {
     domString += '<div>';
-    domString += `<h2>Fullness Score ${eatStatus.full}</h2>`;
+    domString += '<h1>EAT</h1>';
+    domString += `<h2>Score ${eatStatus.full}</h2>`;
+    domString += '<div class= "container">';
     domString += '<button id="healthy">Healthy Food</button>';
     domString += '<button id="unhealthy">Unhealthy Food</button>';
+    domString += '</div>';
+    domString += '</div>';
   });
   utils.printToDom('eat', domString);
+  $('#healthy').click(() => {
+    console.error('button clicked');
+  });
 };
+
 
 export default { eatDomBuilder };

@@ -1,8 +1,8 @@
 import '../styles/main.scss';
-import eat from './components/eat';
-import play from './components/play';
-import fight from './components/fight';
-import sleep from './components/sleep';
+import eat from './components/Eat/eat';
+import play from './components/Play/play';
+import fight from './components/Fight/fight';
+import sleep from './components/Sleep/sleep';
 // import progress from './components/progress';
 
 const init = () => {

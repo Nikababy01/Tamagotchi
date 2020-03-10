@@ -1,0 +1,14 @@
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+
+
+    .quad{
+        border: 1px solid black;
+        width: 49%;
+        height: 400px;
+        float: left;   
+    }
+
+    #fight.quad{
+        background-color: greenyellow;
+    }

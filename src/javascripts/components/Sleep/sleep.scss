@@ -1,0 +1,18 @@
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+
+.sleep-column{
+background-color:purple;
+ float: left;
+ width: 50%;
+ padding: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#sleep.quad{
+    background-color:purple;
+}

@@ -1,0 +1,36 @@
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+
+
+
+.quad{
+    width: 49%;
+    height: 200px;
+    float: left;
+}
+#eat.quad{
+    background-color: blue;
+}
+
+h1{
+    text-align:  center ;
+}
+
+h2{
+    text-align:  center ;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+padding: 10px;
+background-color: red;
+margin: 5px;
+width: 150px;
+height: 50px;
+font-size: 14px;
+font-weight: bold;
+}

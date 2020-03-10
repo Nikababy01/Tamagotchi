@@ -4,17 +4,14 @@ import './sleep.scss';
 
 const sleepDomBuilder = () => {
   const sleep = textData.getSleepStatus();
-  let domString = '';
-  sleep.forEach((sleepStatus) => {
-    domString += '<div>';
-    domString += '<h1>SLEEP</h1>';
-    domString += `<h2>Energy ${sleepStatus.energy}</h2>`;
-    domString += '<div class= "container">';
-    domString += '<button id="nap" class="btnstyle">Nap</button>';
-    domString += '<button id="deep" class="btnstyle">Deep Slumber</button>';
-    domString += '</div>';
-    domString += '</div>';
-  });
+  const domString = `<div>
+    <h1>SLEEP</h1>
+    <h2>Energy ${sleep[0].energy}</h2>
+    <div class= "container">
+    <button id="nap" >Nap</button>
+    <button id="deep">Deep Slumber</button>
+    </div>
+    </div>`;
   utils.printToDom('sleep', domString);
   $('#nap').click(() => {
     console.error('clicked');

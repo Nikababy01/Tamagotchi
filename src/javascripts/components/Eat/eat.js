@@ -20,22 +20,18 @@ import './eat.scss';
 
 const eatDomBuilder = () => {
   const eat = textData.getEatStatus();
-  let domString = '';
-  eat.forEach((eatStatus) => {
-    domString += '<div>';
-    domString += '<h1>EAT</h1>';
-    domString += `<h2>Score ${eatStatus.full}</h2>`;
-    domString += '<div class= "container">';
-    domString += '<button id="healthy">Healthy Food</button>';
-    domString += '<button id="unhealthy">Unhealthy Food</button>';
-    domString += '</div>';
-    domString += '</div>';
-  });
+  const domString = `<div>
+  <h1>EAT</h1>
+  <h2>Score ${eat[0].full}</h2>
+  <div class= "container">
+  <button id="healthy">Healthy Food</button>
+  <button id="unhealthy">Unhealthy Food</button>
+  </div>
+  </div>`;
   utils.printToDom('eat', domString);
   $('#healthy').click(() => {
     console.error('button clicked');
   });
 };
-
 
 export default { eatDomBuilder };

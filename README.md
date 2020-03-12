@@ -12,9 +12,7 @@ This project showcases all the use of using multiple components. We also used sc
 
 ## Screenshots
 ### Full Page view
-
-
-
+![Main View](./screenshots/tamagotchiplay.png)
 
 ## How to Run
 1. Clone down this repo

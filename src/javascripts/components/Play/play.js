@@ -14,7 +14,16 @@ const playDomBuilder = () => {
    </div>`;
   utils.printToDom('play', domString);
   $('#super').click(() => {
-    console.error('clicked');
+    if (play[0].fun <= 50) {
+      play[0].fun += 50;
+      playDomBuilder(play);
+    }
+  });
+  $('#slightly').click(() => {
+    if (play[0].fun <= 98) {
+      play[0].fun += 2;
+      playDomBuilder(play);
+    }
   });
 };
 

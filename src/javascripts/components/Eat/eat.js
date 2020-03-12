@@ -2,22 +2,6 @@ import utils from '../../helpers/utils';
 import textData from '../../helpers/data/textData';
 import './eat.scss';
 
-// const unhealthyFoodBtn = (e) => {
-// if (e.target.id === 'unhealthy') {
-//  return 'unhealthy button clicked';
-//  $('#healthy').click(unhealthyFoodBtn);
-// }
-// };
-
-
-// const healthyFoodBtn = (e) => {
-// if (e.target.id === 'healthy') {
-// console.error('clicked');
-//   }
-//   $('#healthy').click(healthyFoodBtn);
-// };
-
-
 const eatDomBuilder = () => {
   const eat = textData.getEatStatus();
   const domString = `<div>

@@ -6,7 +6,7 @@ const playDomBuilder = () => {
   const play = textData.getPlayStatus();
   const domString = `<div>
    <h1>PLAY</h1>
-   <h2>Score ${play[0].fun}</h2>
+   <h2>Fun Score ${play[0].fun}</h2>
    <div class = "container">
    <button id="super">Super Fun</button>
    <button id="slightly">Slightly Fun</button>

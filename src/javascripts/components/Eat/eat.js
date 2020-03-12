@@ -6,7 +6,7 @@ const eatDomBuilder = () => {
   const eat = textData.getEatStatus();
   const domString = `<div>
   <h1>EAT</h1>
-  <h2>Score ${eat[0].full}</h2>
+  <h2>Fullness Score ${eat[0].full}</h2>
   <div class= "container">
   <button id="healthy">Healthy Food</button>
   <button id="unhealthy">Unhealthy Food</button>

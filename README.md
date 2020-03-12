@@ -15,6 +15,7 @@ This project showcases all the use of using multiple components. We also used sc
 ![Main View](./screenshots/tamagotchi.png)
 
 
+
 ## How to Run
 1. Clone down this repo
 1. Make sure you have http-server installed via npm. If not get it [HERE](https://www.npmjs.com/package/http-server).

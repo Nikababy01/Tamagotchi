@@ -8,15 +8,21 @@ const fightDomBuilder = () => {
       <h1>FIGHT</h1>
       <h2>Strength ${fight[0].strength}</h2>
       <div class= "container">
-      <button id="run" class="btnstyle">Run Away</button>
-      <button id="violent" class="btnstyle">Violent Attack</button>
+      <button id="run">Run Away</button>
+      <button id="violent">Violent Attack</button>
       </div>
       </div>`;
   utils.printToDom('fight', domString);
   $('#run').click(() => {
-    console.error('clicked');
+    if (fight[0].strength <= 99) {
+      fight[0].strength += 1;
+      fightDomBuilder(fight);
+    }
+  });
+  $('#violent').click(() => {
+    fight[0].strength -= 10;
+    fightDomBuilder(fight);
   });
 };
-
 
 export default { fightDomBuilder };

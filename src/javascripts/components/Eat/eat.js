@@ -30,7 +30,14 @@ const eatDomBuilder = () => {
   </div>`;
   utils.printToDom('eat', domString);
   $('#healthy').click(() => {
-    console.error('button clicked');
+    if (eat[0].full <= 90) {
+      eat[0].full += 10;
+      eatDomBuilder(eat);
+    }
+  });
+  $('#unhealthy').click(() => {
+    eat[0].full -= 3;
+    eatDomBuilder(eat);
   });
 };
 

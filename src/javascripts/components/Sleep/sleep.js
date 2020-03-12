@@ -14,8 +14,18 @@ const sleepDomBuilder = () => {
     </div>`;
   utils.printToDom('sleep', domString);
   $('#nap').click(() => {
-    console.error('clicked');
+    if (sleep[0].energy <= 50) {
+      sleep[0].energy += 50;
+      sleepDomBuilder(sleep);
+    }
+  });
+  $('#deep').click(() => {
+    if (sleep[0].energy <= 40) {
+      sleep[0].energy += 60;
+      sleepDomBuilder(sleep);
+    }
   });
 };
+
 
 export default { sleepDomBuilder };
